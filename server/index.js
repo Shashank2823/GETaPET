@@ -13,7 +13,7 @@ app.get("/", function (req, res) {
 });
 
 app.listen(4000, function () {
-  console.log("App Listening on port 3000");
+  console.log("App Listening on port 4000");
   connection.connect(function (err) {
     if (err) throw err;
     console.log("Database Connected");

@@ -1,7 +1,33 @@
 
-import React from 'react';
-
+import React,{useState} from 'react';
+import axios from "axios";
 export default function RegisterPage() {
+    const [inputs, setInputs] = useState({
+        username: "",
+        email: "",
+        contact: "",
+        password: "",
+      });
+   
+    //   const [err, setError] = useState(null);
+
+    //   const navigate = useNavigate();
+    
+      const handleChange = (e) => {
+        setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+      };
+    
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+          const res=await axios.post("/auth/register", inputs);
+          console.log(res);
+        } catch (err) {
+          console.log(err);
+        }
+      };
+
+
     return (
         <div>
            {/* name,email,contact no.2,create pass,I agree to conditions(required),submit*/}
@@ -15,24 +41,37 @@ export default function RegisterPage() {
 
                         <h5 className="fw-normal mb-3 pb-3" style={{ letterSpacing: '1px' }}>REGISTER NOW !</h5>
                         <div className="form-outline mb-4">
-                            <input type="email" id="form2Example17" className="form-control form-control-lg" />
+                            <input type="text" id="form2Example17" className="form-control form-control-lg" 
+                            name="username"
+                            onChange={handleChange}/>
                             <label className="form-label" htmlFor="form2Example17">Name:</label>
+                            
                         </div>
                         <div className="form-outline mb-4">
-                            <input type="email" id="form2Example17" className="form-control form-control-lg" />
+                            <input type="email" id="form2Example17" className="form-control form-control-lg" 
+                            name="email"
+                            onChange={handleChange}/>
                             <label className="form-label" htmlFor="form2Example17">Email address</label>
                         </div>
 
                         <div className="form-outline mb-4">
-                            <input type="password" id="form2Example27" className="form-control form-control-lg" />
+                            <input type="number" id="form2Example27" className="form-control form-control-lg"
+                            name="contact"
+                            onChange={handleChange} />
+                            <label className="form-label" htmlFor="form2Example27">Contact</label>
+                        </div>
+                        
+                        <div className="form-outline mb-4">
+                            <input type="password" id="form2Example27" className="form-control form-control-lg" 
+                            name="password"
+                            onChange={handleChange}/>
                             <label className="form-label" htmlFor="form2Example27">Password</label>
                         </div>
 
                         <div className="pt-1 mb-4">
-                            <button className="btn btn-dark btn-lg btn-block" type="button">Login</button>
+                            <button className="btn btn-dark btn-lg btn-block" type="button" onClick={handleSubmit}>SUBMIT</button>
                         </div>
 
-                        <p className="mb-2" style={{ color: '#393f81', textAlign: 'center' }}>Forgot password? Don't have an account? <a href="#!" style={{ color: '#393f81' }}>Register here</a></p>
                     </form>
                 </div>
             </div>
