@@ -25,3 +25,22 @@ justify-content: center;
 align-items: center;
 }
 
+/* CSS */
+.Links:hover {
+  color: red; /* Change the color on hover */
+}
+
+.Links:hover::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: red; /* Horizontal line below text on hover */
+  transition: width 0.3s;
+}
+
+.nav-item:hover {
+  /* Optional: Change background color on hover */
+  background-color: #f0f0f0;
+}
+

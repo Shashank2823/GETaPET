@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function NavBar() {
   return (
     <div>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{height:'99px'}}>
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
           <img
@@ -13,6 +13,7 @@ function NavBar() {
             width="100"
             height="100"
             padding="-10px"
+            borderRadius="100px"
             className="d-inline-block align-top"
           />
         </Link>
@@ -25,7 +26,7 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarScroll">
           <ul className="navbar-nav me-auto my-2 my-lg-0">
             <li className="nav-item">
-              <Link to="/" className="nav-link Links">
+              <Link to="/" className="nav-link Links ">
                 HOME
               </Link>
             </li>
@@ -46,8 +47,10 @@ function NavBar() {
             </li>
           </ul>
          
-            
-          <button className="btn btn-outline-success">LOGIN</button>
+              <Link to="/Login" className="btn btn-outline-success" >
+              LOGIN
+              </Link>
+          
         </div>
       </div>
     </nav>
