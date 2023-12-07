@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 import React from 'react';
 
 export default function LoginPage() {
@@ -59,9 +56,4 @@ export default function LoginPage() {
                 </div>
             </section>
         </div>
-    );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> main
+    );}

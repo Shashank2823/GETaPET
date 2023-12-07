@@ -19,7 +19,6 @@ body, html {
   width: 100%;
 }
 
-<<<<<<< HEAD
 
 .Home-Container {
   height: 100vh;
@@ -41,9 +40,6 @@ body, html {
   margin: 0 auto; /* This should center the container */
 }
 
-=======
-/* CSS */
->>>>>>> main
 .Links:hover {
   color: red; /* Change the color on hover */
 }
@@ -61,7 +57,3 @@ body, html {
   /* Optional: Change background color on hover */
   background-color: #f0f0f0;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> main
