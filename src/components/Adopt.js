@@ -1,7 +1,10 @@
 import React from 'react';
 
 function Adopt() {
-  return (<div><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1></div>)
+
+  return (<div>Adopt Page Content</div>)
+  // Name ,email,pass,phone,breed,submit
+
 }
 
 export default Adopt;
