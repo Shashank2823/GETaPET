@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Adopt() {
-  return (<div>Adopt Page Content</div>)
+  return (<div><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1><h1>hi</h1></div>)
 }
 
 export default Adopt;
