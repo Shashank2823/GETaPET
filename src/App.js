@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Pets from './components/Pets';
 import Adopt from './components/Adopt';
 import About from './components/About';
+import LoginPage from './components/LoginPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/Pets" element={<Pets/>} />
           <Route path="/Adopt" element={<Adopt/> } />
           <Route path="/About" element={<About/>} />
+          <Route path="/Login" element={<LoginPage/>}/>
         </Routes>
         </div>
       </div>
