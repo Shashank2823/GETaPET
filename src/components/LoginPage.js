@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 import React from 'react';
 
 export default function LoginPage() {
@@ -56,4 +60,8 @@ export default function LoginPage() {
             </section>
         </div>
     );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main
