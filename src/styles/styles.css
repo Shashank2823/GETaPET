@@ -12,20 +12,34 @@
   margin-left:70px;
   font-size: large;
 }
-.Home-Container {
-  background-color: #FAEED1;
-  height: 100vh;
-  width: 100vw;
-  background-image: url('/public/images/Home-Background.jpeg');
-  background-repeat: no-repeat;
- background-size: contain;
- position: fixed;
-display: flex;
-justify-content: center;
-align-items: center;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
-/* CSS */
+
+.Home-Container {
+  height: 100vh;
+
+}
+
+.Home-Content {
+  margin-top: 70px; 
+}
+
+.Home-img {
+  width: 100%;
+  height: auto; 
+  object-fit: cover;
+  object-position: center;
+}
+
+.pets-container {
+  margin: 0 auto; /* This should center the container */
+}
+
 .Links:hover {
   color: red; /* Change the color on hover */
 }
@@ -43,4 +57,3 @@ align-items: center;
   /* Optional: Change background color on hover */
   background-color: #f0f0f0;
 }
-

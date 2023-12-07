@@ -1,5 +1,6 @@
 // src/components/Pets.js
 import React, { useState, useEffect } from 'react';
+import { Card, Col, Row } from 'react-bootstrap';
 
 function Pets() {
   const [pets, setPets] = useState([]);
@@ -21,29 +22,27 @@ function Pets() {
   }, []); 
 
   return (
-    <div className="container">
-      <h1>Pets Available for Adoption</h1>
-      {pets.map(pet => (
-        <div key={pet.pet_id} className="card mb-3">
-          <div className="row g-0">
-            <div className="col-md-4">
-              <img src={pet.image} alt={pet.name} className="img-fluid" />
-            </div>
-            <div className="col-md-8">
-              <div className="card-body">
-                <h5 className="card-title">{pet.name}</h5>
-                <p className="card-text">Age: {pet.age} years</p>
-                <p className="card-text">Gender: {pet.gender}</p>
-                <p className="card-text">Species: {pet.species}</p>
-                <p className="card-text">Breed: {pet.breed}</p>
-                <p className="card-text">Behavior: {pet.behavior}</p>
-                <p className="card-text">Availability: {pet.availability}</p>
-                <p className="card-text">Status: {pet.status}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      ))}
+    <div className="pets-container mx-auto"> 
+      <h1 className="text-center">Pets Available for Adoption</h1>
+      <Row xs={1} md={4} className="g-4">
+        {pets.map(pet => (
+          <Col key={pet.pet_id}>
+            <Card style={{ width: '18rem',margin: '0 auto' }} className="mb-3">
+              <Card.Img variant="top" src={pet.image} alt={pet.name} className="img" />
+              <Card.Body>
+                <Card.Title>{pet.name}</Card.Title>
+                <Card.Text>Age: {pet.age} years</Card.Text>
+                <Card.Text>Gender: {pet.gender}</Card.Text>
+                <Card.Text>Species: {pet.species}</Card.Text>
+                <Card.Text>Breed: {pet.breed}</Card.Text>
+                <Card.Text>Behavior: {pet.behavior}</Card.Text>
+                <Card.Text>Availability: {pet.availability}</Card.Text>
+                <Card.Text>Status: {pet.status}</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
     </div>
   );
 }
